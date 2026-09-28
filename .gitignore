@@ -1,0 +1,7 @@
+.env
+upstream/
+data/
+queue/
+__pycache__/
+*.log
+*.png

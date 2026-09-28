@@ -1,0 +1,8 @@
+services:
+  epic-helper:
+    build: .
+    env_file: .env
+    shm_size: 2gb
+    volumes:
+      - ./data:/opt/epic-helper/app/volumes
+    restart: "no"

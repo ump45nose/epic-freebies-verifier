@@ -20,3 +20,5 @@ docker compose -f compose.example.yaml run --rm epic-helper
 ## 数据与来源
 
 账号密码、模型密钥、浏览器会话、截图和订单记录均留在本地 `./data` 或 `.env`，已被 Git 忽略。本覆盖层依赖 GPL-3.0 上游，按相同许可证发布；可在 [Autsunset/epic-free](https://github.com/Autsunset/epic-free) 和 [Ronchy2000/epic-freebies-helper](https://github.com/Ronchy2000/epic-freebies-helper) 查看原项目与完整安装要求。这里的商品页核验是独立补充，不能替代 Epic 账号的实际订单核查。
+
+队列 worker 的结果包含 `outcome.success`、`outcome.reason` 与 `details.newly_claimed`。只接受本次运行生成的结果文件，进程退出码和领取验证同时通过才记为成功；旧结果文件不能替代本次执行。
